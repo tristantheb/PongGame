@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
    * @param {Racket} $racket The object of the racket element
    * @param {number} direction The value +1/-1 of the direction
    */
-  function moveRacket($racket, direction) {
+  function updateRacket($racket, direction) {
     var racketHeight = $racket.offsetHeight;
     var racket = $racket.offsetTop + direction * SPEED_MOVE;
     if (racket <= limitTop && direction === UP) racket = limitTop;
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
   /**
    * Generate the ball movement and change direction when collision
    */
-  function moveBall() {
+  function updateBall() {
     // Calc the x ball position
     var horizontalDisplacement = direction.x * speed.x;
     position.x = position.x + horizontalDisplacement;
@@ -210,9 +210,9 @@ document.addEventListener('DOMContentLoaded', function () {
    * Update the screen render
    */
   function render() {
-    moveRacket($racketLeft, playerLeft.direction);
-    moveRacket($racketRight, playerRight.direction);
-    moveBall();
+    updateRacket($racketLeft, playerLeft.direction);
+    updateRacket($racketRight, playerRight.direction);
+    updateBall();
     pointsCount();
   }
 
