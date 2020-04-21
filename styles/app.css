@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.playground {
+  background: #181818;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.ball {
+  background: #fff;
+  border-radius: 50%;
+  height: 43px;
+  position: absolute;
+  top: 50%;
+  width: 43px;
+}
+
+.racket {
+  background: #fff;
+  height: 100px;
+  position: absolute;
+  width: 20px;
+}
+
+#racket1 {
+  left: 10px;
+}
+
+#racket2 {
+  right: 10px;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+}
+
+.separator {
+  background: #fff;
+  height: 100px;
+  margin: 0 20px;
+  width: 10px;
+}
+
+.count-left, .count-right {
+  color: #fff;
+  font: 900 80px Arial;
+}
