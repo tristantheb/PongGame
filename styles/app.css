@@ -27,6 +27,7 @@ body {
   background: #fff;
   height: 100px;
   position: absolute;
+  top: calc(50vh - 50px);
   width: 20px;
 }
 
